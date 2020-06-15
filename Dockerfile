@@ -5,7 +5,7 @@ RUN yum -y install epel-release && \
     yum -y update && \
     yum -y install ruby gcc ruby-devel supervisor createrepo yum-utils nginx && \
     yum clean all
-RUN gem install rb-inotify
+RUN gem install --no-document ffi:1.12.2 rb-inotify:0.9.10
 
 RUN mkdir /repo /logs
 
